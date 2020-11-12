@@ -99,7 +99,7 @@ body {
 }
 
 img {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -191,6 +191,9 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
 }
 .link:hover,
 .link:focus {
@@ -214,6 +217,10 @@ img {
   border-radius: 2px;
   margin: 0;
   opacity: 0;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity;
+  transition-duration: 250ms;
+}
 }
 .link.current:hover:after,
 .link.current:focus:after {
@@ -262,11 +269,18 @@ img {
 .link-mail {
   display: flex;
   align-items: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
 }
+
 
 .link-tell {
   display: flex;
   align-items: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
 }
 
 .link-mail:hover,
@@ -291,10 +305,12 @@ img {
 }
 
 .progect-item {
-  width: 370px;
+  min-width: 370px;
   height: 404px;
   background-color: var(--white-cl);
-  border: 1px solid #eeeeee;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
 }
 .progect-item:nth-child(-n + 6) {
   margin-bottom: 30px;
@@ -304,15 +320,26 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.progect-content {
+  width: 370px;
+  height: 110px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
 .projects {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-cl);
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 4px;
-  padding-left: 24px;
 }
 .progect-position {
   font-weight: 400;
@@ -321,8 +348,37 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-text-cl);
   margin-top: 0;
-  margin-bottom: 20px;
-  padding-left: 24px;
+  margin-bottom: 0px;
+}
+
+.thumb-progect {
+  position: relative;
+  overflow: hidden;
+}
+
+.progect-p {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin: 0;
+  width: 100%;
+  height: 294px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.556;
+  letter-spacing: 0.03em;
+  color: var(--white-cl);
+  padding: 63px 24px;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, transform, opacity;
+  transition-duration: 250ms;
+}
+.progect-link:hover .progect-p,
+.progect-link:focus .progect-p {
+  opacity: 1;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(-100%);
 }
 .features {
   display: flex;
@@ -448,6 +504,9 @@ img {
   height: 50px;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
 }
 
 .btn:hover,
@@ -489,6 +548,9 @@ img {
   height: 38px;
   border: none;
   cursor: pointer;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
 }
 .nav-progect .item:not(:last-child) {
   margin-right: 8px;
@@ -560,12 +622,18 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
 }
 
 .social-icon-svg {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
 }
 .social-icons-link:hover,
 .social-icons-link:focus {
@@ -597,9 +665,15 @@ img {
   background-repeat: no-repeat;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
+  transition-duration: 250ms;
 }
 .customer-icon {
   fill: #afb1b8;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
 }
 .customer-link:hover .customer-icon,
 .customer-link:focus .customer-icon {
@@ -653,6 +727,9 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 250ms;
 }
 .social-icon-footer {
   width: 20px;
