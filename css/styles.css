@@ -221,7 +221,7 @@ img {
   transition-property: opacity;
   transition-duration: 250ms;
 }
-}
+
 .link.current:hover:after,
 .link.current:focus:after {
   opacity: 1;
@@ -273,7 +273,6 @@ img {
   transition-property: fill;
   transition-duration: 250ms;
 }
-
 
 .link-tell {
   display: flex;
