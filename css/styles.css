@@ -202,13 +202,10 @@ img {
   color: var(--accent-cl);
 }
 .site-nav .link {
-  display: block;
-}
-.link.current {
   position: relative;
   display: block;
 }
-.site-nav.link:hover:after,
+.site-nav .link:hover:after,
 .current:after {
   content: "";
   position: absolute;
@@ -231,6 +228,7 @@ img {
 }*/
 .site-nav {
   display: inline-flex;
+  align-items: center;
   width: 294px;
 }
 .site-nav .item:not(:last-child) {
