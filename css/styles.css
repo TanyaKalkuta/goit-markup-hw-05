@@ -204,6 +204,8 @@ img {
 .site-nav .link {
   position: relative;
   display: block;
+  transition-timing-function: var(--timing-function);
+  transition-duration: var(--time);
 }
 .site-nav .link:hover:after,
 .current:after {
@@ -216,16 +218,11 @@ img {
   background: var(--accent-cl);
   border-radius: 2px;
   margin: 0;
-  /*opacity: 1;*/
+  opacity: 1;
   transition-timing-function: var(--timing-function);
   transition-duration: var(--time);
   /*transition-property: opacity;*/
 }
-/*
-.link.current:hover:after,
-.link.current:focus:after {
-  opacity: 1;
-}*/
 .site-nav {
   display: inline-flex;
   align-items: center;
