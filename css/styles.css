@@ -83,6 +83,8 @@
   --white-cl: #ffffff;
   --hero-cl: #2f303a;
   --footer-cl: #000000;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 
 html {
@@ -137,7 +139,6 @@ img {
   margin-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
-  /*  background-color: violet;*/
 }
 
 .list {
@@ -150,7 +151,6 @@ img {
   height: 80px;
   border-bottom: 1px solid #ececec;
 }
-/*background-color: yellowgreen;*/
 
 .header-container {
   display: flex;
@@ -191,9 +191,9 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .link:hover,
 .link:focus {
@@ -217,9 +217,9 @@ img {
   border-radius: 2px;
   margin: 0;
   opacity: 0;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: opacity;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 
 .link.current:hover:after,
@@ -269,17 +269,17 @@ img {
 .link-mail {
   display: flex;
   align-items: center;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: fill;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 
 .link-tell {
   display: flex;
   align-items: center;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: fill;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 
 .link-mail:hover,
@@ -307,9 +307,9 @@ img {
   min-width: 370px;
   height: 404px;
   background-color: var(--white-cl);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: box-shadow;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .progect-item:nth-child(-n + 6) {
   margin-bottom: 30px;
@@ -369,9 +369,9 @@ img {
   color: var(--white-cl);
   padding: 63px 24px;
   opacity: 0;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: background-color, transform, opacity;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .progect-link:hover .progect-p,
 .progect-link:focus .progect-p {
@@ -503,16 +503,16 @@ img {
   height: 50px;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: color, background-color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
+  cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
   color: var(--accent-cl);
   background-color: var(--white-cl);
-  /*cursor: pointer;*/
 }
 
 .section-title {
@@ -547,9 +547,9 @@ img {
   height: 38px;
   border: none;
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .nav-progect .item:not(:last-child) {
   margin-right: 8px;
@@ -621,18 +621,18 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: background-color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 
 .social-icon-svg {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: fill;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .social-icons-link:hover,
 .social-icons-link:focus {
@@ -664,15 +664,15 @@ img {
   background-repeat: no-repeat;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: border-color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .customer-icon {
   fill: #afb1b8;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: fill;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .customer-link:hover .customer-icon,
 .customer-link:focus .customer-icon {
@@ -726,9 +726,9 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transition-property: background-color;
-  transition-duration: 250ms;
+  transition-duration: var(--time);
 }
 .social-icon-footer {
   width: 20px;
@@ -746,6 +746,9 @@ img {
   width: 100%;
   height: 1024px;
   background-color: rgba(0, 0, 0, 0.2);
+  transition-timing-function: var(--timing-function);
+  transition: scale (1);
+  transition-duration: var(--time);
 }
 .backdrop.is-hidden {
   opacity: 0;
